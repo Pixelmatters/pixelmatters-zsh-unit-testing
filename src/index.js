@@ -52,7 +52,7 @@ const collectInformation = async () => {
 const getTestChangesFn = (answers) => {
   let data
   try {
-    data = fs.readFileSync('./functions/testChanges.sh', 'utf8')
+    data = fs.readFileSync('functions/testChanges.sh', 'utf8')
   } catch (err) {
     throw Error(err)
   }
@@ -64,7 +64,7 @@ const getTestChangesFn = (answers) => {
 const getTestBranchFn = (answers) => {
   let data
   try {
-    data = fs.readFileSync('./functions/testBranch.sh', 'utf8')
+    data = fs.readFileSync('functions/testBranch.sh', 'utf8')
   } catch (err) {
     throw Error(err)
   }
