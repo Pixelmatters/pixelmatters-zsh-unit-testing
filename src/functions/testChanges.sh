@@ -9,7 +9,7 @@ function testchanges() {
 
     NR_TRIMMED_FILES=`${TRIMMED_FILES.length}`
     if [ "$NR_TRIMMED_FILES" -lt "1" ]; then
-        exit "Failed. You don't have any changed files"
+        return "Failed. You don't have any changed files"
     fi
 
     CHANGED_FILES_LIST=(`echo ${TRIMMED_FILES}`)
