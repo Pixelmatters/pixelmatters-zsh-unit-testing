@@ -58,7 +58,8 @@ const getTestChangesFn = (answers) => {
     throw Error(err)
   }
   
-  data.replace(new RegExp('@testRunner', 'g'), answers.testRunner)
+  data = data.replace(new RegExp('@testRunner', 'g'), answers.testRunner)
+
   return data
 }
 
@@ -86,6 +87,7 @@ const getZshrcFile = () => {
 
   return data
 }
+
 const updateZshrcFile = (content) => {
   try {
     fs.writeFileSync(`${userHomeDir}/.zshrc`, content)
@@ -101,6 +103,7 @@ const init = async () => {
   
   let zshrcFile = await getZshrcFile()
   let oldTestChangesFn = zshrcFile.match(/function testchanges([\s\S]*)}/mg)
+
   if (oldTestChangesFn) {
     oldTestChangesFn.join()
     zshrcFile = zshrcFile.replace(oldTestChangesFn, testChangesFn)
@@ -116,6 +119,43 @@ const init = async () => {
     zshrcFile = `${zshrcFile}\n\n${testBranchFn}`
   }
   await updateZshrcFile(zshrcFile)
+
+  
+  console.log(`
+    You're done! 🎉
+
+    The following functions were added to you .zshrc config:
+        - testchanges
+        - testbranch
+
+    Usage:
+        testchanges [-u]
+        testbranch [-u <targetbranch>]
+    
+    Examples:
+      # testchanges
+        - Run unit tests on changed files:
+        $ > testchanges
+
+        - Run unit tests on changed files and update its snapshots:
+        $ > testchanges -u
+
+      # testbranch
+        - Run unit tests on different files between current and target branch:
+        $ > testbranch
+
+        - Run unit tests on different files between current and target branch and update its snapshots:
+        $ > testbranch -u
+
+        - Run unit tests on different files between current and custom target branch:
+        $ > testbranch fix/some-branch-name
+
+        - Run unit tests on different files between current and custom target branch:
+        $ > testbranch -u fix/some-branch-name
+        
+      For more comprehensive help, go to: 
+      https://www.npmjs.com/package/@jagoncalves14/unit-tests-addon
+    `);
 }
 
 init()
