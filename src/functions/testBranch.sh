@@ -16,7 +16,7 @@ function testbranch() {
     TRIMMED_FILES=${TRIMMED_TS}
 
 
-    NR_TRIMMED_FILES=`${TRIMMED_FILES.length}`
+    NR_TRIMMED_FILES=`echo -n $TRIMMED_FILES | wc -m`
     if [ "$NR_TRIMMED_FILES" -lt "1" ]; then
         return "Failed. You don't have any changed files"
     fi
