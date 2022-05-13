@@ -2,7 +2,8 @@
 
 const inquirer = require('inquirer')
 const fs = require('fs')
-const os = require("os")
+const os = require('os')
+const path = require('path')
 
 const userHomeDir = os.homedir()
 const collectInformation = async () => {
@@ -52,7 +53,7 @@ const collectInformation = async () => {
 const getTestChangesFn = (answers) => {
   let data
   try {
-    data = fs.readFileSync('functions/testChanges.sh', 'utf8')
+    data = fs.readFileSync(path.resolve(__dirname, 'functions/testChanges.sh'), 'utf8')
   } catch (err) {
     throw Error(err)
   }
@@ -64,7 +65,7 @@ const getTestChangesFn = (answers) => {
 const getTestBranchFn = (answers) => {
   let data
   try {
-    data = fs.readFileSync('functions/testBranch.sh', 'utf8')
+    data = fs.readFileSync(path.resolve(__dirname, 'functions/testBranch.sh'), 'utf8')
   } catch (err) {
     throw Error(err)
   }
