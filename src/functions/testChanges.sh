@@ -16,9 +16,9 @@ function testchanges() {
 
     if [ "$1" != "-u" ]
     then
-        npx @testRunner ${CHANGED_FILES_LIST}
+        @testRunner ${CHANGED_FILES_LIST}
     else
         echo "Updating snapshots"
-        npx @testRunner -u ${CHANGED_FILES_LIST}
+        @testRunner -u ${CHANGED_FILES_LIST}
     fi
 }

@@ -10,17 +10,9 @@ const collectInformation = async () => {
   let response
   await inquirer.prompt([
     {
-      type: 'list',
+      type: 'input',
       name: 'testRunner',
-      message: 'What unit test framework do you use?',
-      choices: ['jest', 'vitest'],
-      filter(val) {
-        if (val === 'vitest') {
-          return `${val} run`
-        } else {
-          return val
-        }
-      },
+      message: "What command you use for running unit tests?",
     },
     {
       type: 'list',
