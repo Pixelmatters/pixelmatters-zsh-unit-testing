@@ -13,6 +13,7 @@ const collectInformation = async () => {
       type: 'input',
       name: 'testRunner',
       message: "What command you use for running unit tests?",
+      default: 'pnpm run test:unit',
     },
     {
       type: 'list',
