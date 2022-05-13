@@ -1,0 +1,19 @@
+{
+  "name": "@jagoncalves14/unit-test-addons",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "Useful zsh functions for unit testing",
+  "license": "MIT",
+  "repository": "jagoncalves14/unit-test-addons",
+  "main": "index.js",
+  "keywords": [
+    "unit-test-addons",
+    "jagoncalves14",
+    "pixelmatters",
+    "npm",
+    "package"
+  ],
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
