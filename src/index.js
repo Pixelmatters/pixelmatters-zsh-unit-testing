@@ -107,9 +107,7 @@ const init = async () => {
   } else {
     zshrcFile = `${zshrcFile}\n\n${testChangesFn}`
   }
-  await updateZshrcFile(zshrcFile)
 
-  zshrcFile = await getZshrcFile()
   let oldTestBranchFn = zshrcFile.match(/function testbranch([\s\S]*)}/mg)
   if (oldTestBranchFn) {
     oldTestBranchFn.join()
