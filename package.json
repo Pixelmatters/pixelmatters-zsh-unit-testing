@@ -1,12 +1,20 @@
 {
+  "license": "MIT",
+  "author": "João Gonçalves",
   "name": "@jagoncalves14/unit-test-addons",
+  "description": "Useful zsh functions for unit testing",
   "version": "0.1.0",
   "type": "commonjs",
-  "description": "Useful zsh functions for unit testing",
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jagoncalves14/unit-test-addons.git"
+    "url": "git+https://github.com/jagoncalves14/unit-test-addons.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "unit-test-addon": "node index.js",
+    "test": "node index.js"
   },
   "main": "src/index.js",
   "bin": {
@@ -23,14 +31,9 @@
   "dependencies": {
     "inquirer": "^8.2.4"
   },
+  "devDependencies": {},
   "bugs": {
     "url": "https://github.com/jagoncalves14/unit-test-addons/issues"
   },
-  "homepage": "https://github.com/jagoncalves14/unit-test-addons#readme",
-  "devDependencies": {},
-  "scripts": {
-    "unit-test-addon": "node index.js",
-    "test": "node index.js"
-  },
-  "author": "João Gonçalves"
+  "homepage": "https://github.com/jagoncalves14/unit-test-addons#readme"
 }
