@@ -3,7 +3,7 @@
   "author": "João Gonçalves",
   "name": "@jagoncalves14/unit-test-addons",
   "description": "Useful zsh functions for unit testing",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false,
   "type": "commonjs",
   "repository": {
@@ -19,7 +19,7 @@
   },
   "main": "src/index.js",
   "bin": {
-    "unit-test-addon": "src/index.js"
+    "unit-test-addons": "./cli.js"
   },
   "keywords": [
     "unit-test-addons",

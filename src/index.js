@@ -85,7 +85,6 @@ const getZshrcFile = () => {
 
   return data
 }
-
 const updateZshrcFile = (content) => {
   try {
     fs.writeFileSync(`${userHomeDir}/.zshrc`, content)
