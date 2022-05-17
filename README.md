@@ -11,13 +11,13 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Pixelmatters/pixelmatters-zsh-unit-testing/blob/master/LICENSE">
+  <a href="https://github.com/Pixelmatters/pixelmatters-zsh-unit-testing/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="pixelmatters-zsh-unit-testing is released under the MIT license." />
   </a>
   <a href="https://www.npmjs.com/package/@pixelmatters/pixelmatters-zsh-unit-testing">
     <img src="https://img.shields.io/npm/v/@pixelmatters/pixelmatters-zsh-unit-testing.svg" alt="Current npm package version." />
   </a>
-  <a href="https://github.com/Pixelmatters/pixelmatters-zsh-unit-testing/blob/master/CONTRIBUTING.md">
+  <a href="https://github.com/Pixelmatters/pixelmatters-zsh-unit-testing/blob/main/CONTRIBUTING.md">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
   </a>
   <a href="https://twitter.com/intent/follow?screen_name=pixelmatters_">
@@ -112,7 +112,7 @@ testbranch -u fix/some-branch-name
 
 Whether you're helping us fix bugs, improve the docs, or spread the word, thank you! 💪 🧡
 
-Check out our [**Contributing Guide**](https://github.com/Pixelmatters/pixelmatters-zsh-unit-testing/blob/master/CONTRIBUTING.md) for ideas on contributing and setup steps.
+Check out our [**Contributing Guide**](https://github.com/Pixelmatters/pixelmatters-zsh-unit-testing/blob/main/CONTRIBUTING.md) for ideas on contributing and setup steps.
 
 ## :memo: License
 
