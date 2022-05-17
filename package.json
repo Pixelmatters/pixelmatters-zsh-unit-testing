@@ -1,14 +1,14 @@
 {
   "license": "MIT",
   "author": "João Gonçalves",
-  "name": "@jagoncalves14/unit-test-addons",
+  "name": "@jagoncalves14/pixelmatters-zsh-unit-testing",
   "description": "Useful zsh functions for unit testing",
   "version": "0.1.14",
   "private": false,
   "type": "commonjs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jagoncalves14/unit-test-addons.git"
+    "url": "git+https://github.com/jagoncalves14/pixelmatters-zsh-unit-testing.git"
   },
   "publishConfig": {
     "access": "public"
@@ -19,10 +19,10 @@
   },
   "main": "src/index.js",
   "bin": {
-    "unit-test-addons": "./cli.js"
+    "pixelmatters-zsh-unit-testing": "./cli.js"
   },
   "keywords": [
-    "unit-test-addons",
+    "pixelmatters-zsh-unit-testing",
     "jagoncalves14",
     "pixelmatters",
     "npm",
@@ -33,7 +33,7 @@
     "inquirer": "^8.2.4"
   },
   "bugs": {
-    "url": "https://github.com/jagoncalves14/unit-test-addons/issues"
+    "url": "https://github.com/jagoncalves14/pixelmatters-zsh-unit-testing/issues"
   },
-  "homepage": "https://github.com/jagoncalves14/unit-test-addons#readme"
+  "homepage": "https://github.com/jagoncalves14/pixelmatters-zsh-unit-testing#readme"
 }
