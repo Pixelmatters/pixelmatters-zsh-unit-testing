@@ -3,7 +3,7 @@
   "author": "João Gonçalves",
   "name": "@jagoncalves14/pixelmatters-zsh-unit-testing",
   "description": "Useful zsh functions for unit testing",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "private": false,
   "type": "commonjs",
   "repository": {
