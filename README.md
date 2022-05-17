@@ -3,11 +3,11 @@
 </h1>
 
 <h3 align="center">
-  A Stylelint config standard for Pixelmatters projects
+  CLI that adds useful custom ZSH functions for your unit testing
 </h3>
 
 <p align="center">
-This is a Stylelint config that you can use in your projects.
+  It adds a functions to only run unit tests on files that are different between two branches or on changed files that haven't yet been commited; 
 </p>
 
 <p align="center">
