@@ -7,7 +7,7 @@
 </h3>
 
 <p align="center">
-  It adds a functions to only run unit tests on files that are different between two branches or on changed files that haven't yet been commited; 
+  It adds functions to only run unit tests on files that are different between two branches or on changed files that haven't yet been commited; 
 </p>
 
 <p align="center">
