@@ -1,7 +1,5 @@
 ## Usage
 
-> `$ npm install @jagoncalves14/pixelmatters-zsh-unit-testing`
-
 <h1 align="center">
   pixelmatters-zsh-unit-testing
 </h1>
