@@ -1,5 +1,3 @@
-## Usage
-
 <h1 align="center">
   pixelmatters-zsh-unit-testing
 </h1>
