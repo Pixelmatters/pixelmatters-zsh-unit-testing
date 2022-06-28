@@ -14,7 +14,7 @@
   <a href="https://github.com/Pixelmatters/pixelmatters-zsh-unit-testing/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="pixelmatters-zsh-unit-testing is released under the MIT license." />
   </a>
-  <a href="https://www.npmjs.com/package/@pixelmatters/pixelmatters-zsh-unit-testing">
+  <a href="https://www.npmjs.com/package/@jagoncalves14/jagoncalves14-zsh-unit-testing">
     <img src="https://img.shields.io/npm/v/@pixelmatters/pixelmatters-zsh-unit-testing.svg" alt="Current npm package version." />
   </a>
   <a href="https://github.com/Pixelmatters/pixelmatters-zsh-unit-testing/blob/main/CONTRIBUTING.md">
@@ -36,7 +36,7 @@ If using Yarn:
 1. Install the package globally
 
 ```shell
-yarn global add @pixelmatters/pixelmatters-zsh-unit-testing
+yarn global add @jagoncalves14/pixelmatters-zsh-unit-testing
 ```
 
 ### **NPM**
@@ -46,7 +46,7 @@ If using NPM:
 1. Install the package as a development dependency::
 
 ```shell
-npm install -g @pixelmatters/pixelmatters-zsh-unit-testing
+npm install -g @jagoncalves14/pixelmatters-zsh-unit-testing
 ```
 
 At this point you should be good to go 👍

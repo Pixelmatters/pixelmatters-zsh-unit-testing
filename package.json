@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "author": "João Gonçalves",
-  "name": "@pixelmatters/pixelmatters-zsh-unit-testing",
+  "name": "@jagoncalves14/pixelmatters-zsh-unit-testing",
   "description": "Useful zsh functions for unit testing",
   "version": "0.2.0",
   "private": false,
