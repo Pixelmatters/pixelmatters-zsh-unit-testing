@@ -147,7 +147,7 @@ const init = async () => {
         $ > testbranch -u fix/some-branch-name
         
       For more comprehensive help, go to: 
-      https://www.npmjs.com/package/@jagoncalves14/pixelmatters-zsh-unit-testing
+      https://www.npmjs.com/package/@pixelmatters/pixelmatters-zsh-unit-testing
     `);
 }
 

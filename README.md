@@ -36,7 +36,7 @@ If using Yarn:
 1. Install the package globally
 
 ```shell
-yarn global add @jagoncalves14/pixelmatters-zsh-unit-testing
+yarn global add @pixelmatters/pixelmatters-zsh-unit-testing
 ```
 
 ### **NPM**
@@ -46,7 +46,7 @@ If using NPM:
 1. Install the package as a development dependency::
 
 ```shell
-npm install -g @jagoncalves14/pixelmatters-zsh-unit-testing
+npm install -g @pixelmatters/pixelmatters-zsh-unit-testing
 ```
 
 At this point you should be good to go 👍
