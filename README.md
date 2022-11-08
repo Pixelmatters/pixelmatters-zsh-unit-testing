@@ -110,7 +110,7 @@ testbranch -u fix/some-branch-name
 
 ## 🤝 How to Contribute
 
-Whether you're helping us fix bugs, improve the docs, or spread the word, thank you! 💪 🧡💙
+Whether you're helping us fix bugs, improve the docs, or spread the word, thank you! 💪 🧡 💙
 
 Check out our [**Contributing Guide**](https://github.com/Pixelmatters/pixelmatters-zsh-unit-testing/blob/main/CONTRIBUTING.md) for ideas on contributing and setup steps.
 
