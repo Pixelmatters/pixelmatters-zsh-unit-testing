@@ -1,6 +1,7 @@
 function testbranch() {
     # Function to Run unit tests on different files between two branches
     if CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD); then
+        echo ""
     else
         echo ""
         echo "🚨 Failed."

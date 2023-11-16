@@ -1,18 +1,35 @@
 #!/usr/bin/env node
 
+const { exec } = require('child_process');
 const inquirer = require('inquirer')
 const fs = require('fs')
 const os = require('os')
 const path = require('path')
 
+
+// Determine the Shell
+const envShell = process.env.SHELL;
+let userShell
+if (envShell) {
+  if (envShell.includes('bash')) {
+    userShell = 'bash'
+  } else if (envShell.includes('zsh')) {
+    userShell = 'zsh'
+  } else {
+    return console.log('User is using an unsupported shell.');
+  }
+}
+
 const userHomeDir = os.homedir()
+const shellConfigFilePath = `${userHomeDir}/.${userShell}rc`
+
 const collectInformation = async () => {
   let response
   await inquirer.prompt([
     {
       type: 'input',
       name: 'testRunner',
-      message: "What command you use for running unit tests?",
+      message: 'What command you use for running unit tests?',
       default: 'pnpm run test:unit',
     },
     {
@@ -52,7 +69,6 @@ const getTestChangesFn = (answers) => {
   }
   
   data = data.replace(new RegExp('@testRunner', 'g'), answers.testRunner)
-
   return data
 }
 
@@ -69,11 +85,10 @@ const getTestBranchFn = (answers) => {
   return data
 }
 
-const getZshrcFile = () => {
+const getShellConfigFileData = () => {
   let data
   try {
-    const zshrcPath = `${userHomeDir}/.zshrc`
-    data = fs.readFileSync(zshrcPath, 'utf8')
+    data = fs.readFileSync(shellConfigFilePath, 'utf8')
   } catch (err) {
     throw Error(err)
   }
@@ -81,9 +96,9 @@ const getZshrcFile = () => {
   return data
 }
 
-const updateZshrcFile = (content) => {
+const updateShellConfigFileData = (content) => {
   try {
-    fs.writeFileSync(`${userHomeDir}/.zshrc`, content)
+    fs.writeFileSync(shellConfigFilePath, content)
   } catch (err) {
     throw Error(err)
   }
@@ -94,30 +109,39 @@ const init = async () => {
   const testChangesFn = await getTestChangesFn(answers)
   const testBranchFn = await getTestBranchFn(answers)
   
-  let zshrcFile = await getZshrcFile()
-  let oldTestChangesFn = zshrcFile.match(/function testchanges([\s\S]*)}/mg)
+  let shellConfigFileData = await getShellConfigFileData()
+  let oldTestChangesFn = shellConfigFileData.match(/function testchanges(\s|\S)*?}/)
 
   if (oldTestChangesFn) {
-    oldTestChangesFn.join()
-    zshrcFile = zshrcFile.replace(oldTestChangesFn, testChangesFn)
+    shellConfigFileData = shellConfigFileData.replace(oldTestChangesFn.join(''), testChangesFn)
   } else {
-    zshrcFile = `${zshrcFile}\n\n${testChangesFn}`
+    shellConfigFileData = `${shellConfigFileData}\n\n${testChangesFn}`
   }
 
-  let oldTestBranchFn = zshrcFile.match(/function testbranch([\s\S]*)}/mg)
+  let oldTestBranchFn = shellConfigFileData.match(/function testbranch(\s|\S)*?}/)
   if (oldTestBranchFn) {
-    oldTestBranchFn.join()
-    zshrcFile = zshrcFile.replace(oldTestBranchFn, testBranchFn)
+    shellConfigFileData = shellConfigFileData.replace(oldTestBranchFn.join(''), testBranchFn)
   } else {
-    zshrcFile = `${zshrcFile}\n\n${testBranchFn}`
+    shellConfigFileData = `${shellConfigFileData}\n\n${testBranchFn}`
   }
-  await updateZshrcFile(zshrcFile)
 
+  console.log(shellConfigFileData)
+
+  await updateShellConfigFileData(shellConfigFileData)
+
+  // Execute `source` to update the shell config
+  exec(`source ~/.${userShell}rc`, (error, stdout, stderr) => {
+    if (error) {
+        console.error(`Error executing 'source ~/.${userShell}rc': ${error.message}`);
+        return;
+    }
+    console.log(`'source ~/.${userShell}rc' executed successfully`);
+  });
   
   console.log(`
     You're done! 🎉
 
-    The following functions were added to you .zshrc config:
+    The following functions were added to you .${userShell}rc config:
         - testchanges
         - testbranch
 

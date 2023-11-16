@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  CLI that adds useful custom ZSH functions for your unit testing
+  CLI that adds useful custom Shell (zsh or bash) functions for your unit testing.
 </h3>
 
 <p align="center">
