@@ -1,6 +1,7 @@
 function testchanges() {
     # Function to Run unit tests on all changed files
     if CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD); then
+        echo ""
     else
         echo ""
         echo "🚨 Failed."
