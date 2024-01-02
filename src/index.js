@@ -125,8 +125,6 @@ const init = async () => {
     shellConfigFileData = `${shellConfigFileData}\n\n${testBranchFn}`
   }
 
-  console.log(shellConfigFileData)
-
   await updateShellConfigFileData(shellConfigFileData)
 
   // Execute `source` to update the shell config
